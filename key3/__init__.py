@@ -46,7 +46,17 @@
 
     -- 多个子元素时
             可以通过下标，xpath下标是从1开始
-            
+            //父元素/子元素[index]
+    （不能从查找结果去index）
+    - 文本查找
+        //*[text()="文本内容"]
+
+    - 包含  contains()
+      id=sdd12333
+      text()="sssssssssssssssssssssqwqq"
+
+      $x('//*[contains(@id, "right-t")]') 是@id、name、type等内容，左边是属性，右边是包含的属性值
+      $x('//*[contains(text(), "导出项目")]') 是text文本内容，左边是text()文本标签，右边是包含的文本内容
 
 
     3. css
