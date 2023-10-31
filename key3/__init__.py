@@ -62,4 +62,45 @@
      子元素/..
 
     3. css
+    - 简写基本语法
+        标签（类似 input from这些标签）、 #号=id、 .点=class (class 最特殊   有空格)  .class1.class2
+        空格举例：$(".bs-bars pull-left) 需要写为$(".bs-bars.pull-left")
+
+    - 通用的属性语法 [name="xx"]
+
+    - 多个条件匹配
+        input#id.class[name="xx"][type="text"]
+        多个条件时，可以和上面的基本语法、通用属性任意组合定位
+
+    - 层级关系
+        父子关系   父 > 子
+        子孙    父  子孙
+
+    - 父 找 子 索引
+    - 正则匹配
+        $('[name^="value"]') 匹配 name 以 value 开头的元素
+        $('[name$="end"]') 匹配 name 以 end 结尾的元素
+        $('[class*="text"]') 匹配class属性包含text的元素
+
+    操作元素
+    - 点击   click() dblclick()
+       检测（30 轮询查找)
+       1. 显示还是隐藏    等待
+       2. 遮挡
+       3. 不在当前屏幕  聚焦
+       4. 暂时没出现   等待
+       5. 是否可点击
+
+    - 输入   fill()      输入框直接赋值文本
+        type()    模拟键盘的输入
+    - 鼠标悬停 hover()
+    - 聚焦元素  focus()  点击的时候自动处理
+
+
+场景：
+  select  (哪些是，哪些不是）
+   option
+
+ select_option("可见的选项")
+ select_option(index=1)
 """
