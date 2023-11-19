@@ -20,3 +20,4 @@ with sync_playwright() as p:
     page.locator("#adv-setting-gpc").get_by_text("").click()
     page.get_by_text("一周内").click()
     page.pause()
+    # 本地1
