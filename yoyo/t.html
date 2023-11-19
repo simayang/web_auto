@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>消息提示框</title>
+    <link rel="stylesheet" href="toastr/toastr.min.css">
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="toastr/toastr.min.js"></script>
+
+
+<body>
+
+    <div class="container">
+        <button class="btn btn-info">info</button>
+        <button class="btn btn-success">success</button>
+        <button class="btn btn-warning">warning</button>
+        <button class="btn btn-danger">error</button>
+    </div>
+<script>
+    toastr.options = {
+        closeButton: false,
+        debug: false,
+        progressBar: false,
+        positionClass: "toast-top-center",
+        onclick: null,
+        showDuration: "300",
+        hideDuration: "1000",
+        timeOut: "2000",
+        extendedTimeOut: "1000",
+        showEasing: "swing",
+        hideEasing: "linear",
+        showMethod: "fadeIn",
+        hideMethod: "fadeOut"
+    };
+    //toastr消息
+    $(".btn-info").click(function(){
+        toastr.info('info 消息提示')
+    });
+    $(".btn-success").click(function(){
+        toastr.success('操作成功！')
+    });
+    $(".btn-warning").click(function(){
+        toastr.warning('警告内容！')
+    });
+    $(".btn-danger").click(function(){
+        toastr.error('服务器异常！')
+    });
+</script>
+</body>
+
+
+</html>
